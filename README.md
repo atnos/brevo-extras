@@ -21,7 +21,7 @@ A Rails engine that provides a clean abstraction layer for sending transactional
 Add this line to your application's Gemfile:
 
 ```ruby
-gem "brevo-extras"
+gem "brevo-extras", github: "atnos/brevo-extras"
 ```
 
 And then execute:

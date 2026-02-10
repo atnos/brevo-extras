@@ -47,7 +47,6 @@ module Brevo
           email = recipient[:email].to_s.gsub(/\s/, "").downcase
           safe_mode_domains.any? { |domain| email.end_with?("@#{domain}") }
         end
-        recipients
       end
 
       def sandbox_mode?

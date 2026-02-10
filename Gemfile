@@ -14,3 +14,9 @@ gem "rubocop-rails-omakase", require: false
 # gem "debug", ">= 1.0.0"
 
 gem "minitest-mock", group: :test
+
+# Audits gems for known security defects (use config/bundler-audit.yml to ignore issues)
+gem "bundler-audit", require: false, group: :test
+
+# Static analysis for security vulnerabilities [https://brakemanscanner.org/]
+gem "brakeman", require: false, group: :test

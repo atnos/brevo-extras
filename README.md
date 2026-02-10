@@ -1,3 +1,7 @@
+[![CI](https://github.com/atnos/brevo-extras/actions/workflows/ci.yml/badge.svg)](https://github.com/atnos/brevo-extras/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/atnos/brevo-extras/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/atnos/brevo-extras/actions/workflows/github-code-scanning/codeql)
+[![Dependabot Updates](https://github.com/atnos/brevo-extras/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/atnos/brevo-extras/actions/workflows/dependabot/dependabot-updates)
+
 # Brevo::Extras
 
 A Rails engine that provides a clean abstraction layer for sending transactional emails via the [Brevo](https://www.brevo.com/) API, with built-in safety features to prevent accidental email delivery in development and test environments.

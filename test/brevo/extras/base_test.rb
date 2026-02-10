@@ -13,7 +13,7 @@ class Brevo::Extras::BaseTest < ActiveSupport::TestCase
     def call
       send_email(
         template_id: 42,
-        to: [{ email: "user@example.com", name: "User" }]
+        to: [ { email: "user@example.com", name: "User" } ]
       )
     end
   end
@@ -22,7 +22,7 @@ class Brevo::Extras::BaseTest < ActiveSupport::TestCase
     def call
       send_email(
         template_id: 42,
-        to: [{ email: "user@example.com", name: "User" }],
+        to: [ { email: "user@example.com", name: "User" } ],
         reply_to: { email: "reply@example.com", name: "Reply" }
       )
     end
@@ -80,7 +80,7 @@ class Brevo::Extras::BaseTest < ActiveSupport::TestCase
     end
 
     assert_equal 42, performed_args[:templateId]
-    assert_equal [{ email: "user@example.com", name: "User" }], performed_args[:to]
+    assert_equal [ { email: "user@example.com", name: "User" } ], performed_args[:to]
     assert_equal({ first_name: "Bruno" }, performed_args[:params])
   end
 
@@ -159,7 +159,7 @@ class Brevo::Extras::BaseTest < ActiveSupport::TestCase
       def call
         send_email(
           template_id: 1,
-          to: [{ email: "user@notallowed.com", name: "User" }]
+          to: [ { email: "user@notallowed.com", name: "User" } ]
         )
       end
     end
@@ -183,7 +183,7 @@ class Brevo::Extras::BaseTest < ActiveSupport::TestCase
       TestMailer.call({})
     end
 
-    assert_equal [{ email: "user@example.com", name: "User" }], performed_args[:to]
+    assert_equal [ { email: "user@example.com", name: "User" } ], performed_args[:to]
   end
 
   test "safe mode rejects recipients from non-allowed domains" do
@@ -208,7 +208,7 @@ class Brevo::Extras::BaseTest < ActiveSupport::TestCase
       mailer_class.call({})
     end
 
-    assert_equal [{ email: "user@safe.com", name: "Safe" }], performed_args[:to]
+    assert_equal [ { email: "user@safe.com", name: "Safe" } ], performed_args[:to]
   end
 
   test "safe mode supports multiple allowed domains" do
@@ -235,7 +235,7 @@ class Brevo::Extras::BaseTest < ActiveSupport::TestCase
     end
 
     assert_equal(
-      [{ email: "user@example.com", name: "A" }, { email: "user@atnos.com", name: "B" }],
+      [ { email: "user@example.com", name: "A" }, { email: "user@atnos.com", name: "B" } ],
       performed_args[:to]
     )
   end
@@ -263,7 +263,7 @@ class Brevo::Extras::BaseTest < ActiveSupport::TestCase
       TestMailer.call({})
     end
 
-    assert_equal [{ email: "user@example.com", name: "User" }], performed_args[:to]
+    assert_equal [ { email: "user@example.com", name: "User" } ], performed_args[:to]
   end
 
   # --- deliver_later ---

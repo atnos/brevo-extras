@@ -8,7 +8,7 @@ class Brevo::Extras::DeliveryJobTest < ActiveSupport::TestCase
   setup do
     @data = {
       templateId: 42,
-      to: [{ email: "user@example.com", name: "User" }],
+      to: [ { email: "user@example.com", name: "User" } ],
       params: { first_name: "Bruno" }
     }
   end

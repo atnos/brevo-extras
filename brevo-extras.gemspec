@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency "rails", ">= 8.1.2"
+  spec.add_dependency "brevo", "~> 4.0"
 end

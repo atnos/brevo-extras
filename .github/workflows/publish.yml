@@ -22,7 +22,10 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ruby-4.0.1
+          bundler-cache: false
 
       - name: Release gem
         uses: rubygems/release-gem@v1
+        with:
+          setup-ruby: false
 

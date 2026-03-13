@@ -4,28 +4,26 @@ on:
   release:
     types: [ published ]
 
-permissions:
-  contents: read
-  id-token: write
-
 jobs:
   publish:
+    name: Push gem to RubyGems.org
     runs-on: ubuntu-latest
-
     environment: rubygems
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
+    permissions:
+      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
+      contents: write # IMPORTANT: this permission is required for `rake release` to push the release tag
 
+    steps:
+      # Set up
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ruby-4.0.1
-          bundler-cache: false
+          bundler-cache: true
+          ruby-version: ruby
 
-      - name: Release gem
-        uses: rubygems/release-gem@v1
-        with:
-          setup-ruby: false
-
+      # Release
+      - uses: rubygems/release-gem@v1

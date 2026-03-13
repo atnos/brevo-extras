@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: read
+  id-token: write
 
 jobs:
   publish:
@@ -22,10 +23,6 @@ jobs:
         with:
           ruby-version: ruby-4.0.1
 
-      - name: Build gem
-        run: gem build brevo-extras.gemspec
+      - name: Release gem
+        uses: rubygems/release-gem@v1
 
-      - name: Push to RubyGems
-        run: gem push brevo-extras-*.gem
-        env:
-          GEM_HOST_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}

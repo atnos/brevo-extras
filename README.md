@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/brevo-extras.svg)](https://badge.fury.io/rb/brevo-extras)
 [![CI](https://github.com/atnos/brevo-extras/actions/workflows/ci.yml/badge.svg)](https://github.com/atnos/brevo-extras/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/atnos/brevo-extras/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/atnos/brevo-extras/actions/workflows/github-code-scanning/codeql)
 [![Dependabot Updates](https://github.com/atnos/brevo-extras/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/atnos/brevo-extras/actions/workflows/dependabot/dependabot-updates)

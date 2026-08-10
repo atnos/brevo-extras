@@ -9,6 +9,7 @@ Gem::Specification.new do |spec|
   spec.summary     = "A Rails engine for sending transactional emails via the Brevo API."
   spec.description = "A Rails engine that provides a clean abstraction layer for sending transactional emails via the Brevo API, with built-in sandbox and safe modes, async delivery via Active Job, and automatic retry with polynomial backoff."
   spec.license     = "MIT"
+  spec.required_ruby_version = ">= 3.3"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
